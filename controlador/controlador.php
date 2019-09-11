@@ -15,6 +15,9 @@ $categoria=$_GET['categoria'];
 $horasTrabajadas=$_GET['horas'];
 include '../modelo/Empleado.php';
 $e=new Empleado($categoria,$horasTrabajadas);
+$e->establecerTarifa();
+$e->calcularSalario();
+$e->mostrarResultados();
 
 
  ?>

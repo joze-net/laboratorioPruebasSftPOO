@@ -20,7 +20,8 @@ class Empleado{
     function Empleado($cate,$horas){
       $this->categoria=$cate;
       $this->horasTrabajadas=$horas;
-
+    }
+    function establecerTarifa(){
       switch ($this->categoria) {
         case 1:
 
@@ -59,8 +60,9 @@ class Empleado{
 
 
       }
+    }
       //------------------------------------------------------------------------------
-
+      function calcularSalario(){
      
         if ($this->horasTrabajadas>0 ) {
     
@@ -88,9 +90,10 @@ class Empleado{
      }
   
   }*/
+}
 
 
-  
+  function mostrarResultados(){
 
 
   echo "<table> <tr><td >Categoria: </td><td colspan='3'>$this->categoria</td></tr>"
@@ -114,6 +117,7 @@ class Empleado{
       
 
 }
+
 ?>
 
 
